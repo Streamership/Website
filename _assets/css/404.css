@@ -1,0 +1,28 @@
+a, html, body, h1, h2, h3, h4, h5, p {
+  color: black;
+  text-align: center;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cover {
+  min-height: 100%; height: 100%; width: 100%;
+  background-color: rgba(27, 33, 51, 0.2);
+}
+
+.center{text-align:center}
+#space-invaders {
+  margin: 0 auto;
+  display: block;
+  background: white;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

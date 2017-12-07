@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Streamership</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <meta content="SS" property="og:title" />
+    <meta content="Streamership - Welcome to our Website!" property="og:description" />
+    <meta content="http://streamership.com/_assets/_assets/images/icon.png" property="og:image" />
+
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+
+    <!-- CSS/JS stuff -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="../_assets/css/font-awesome.min.css">
+    <link href="../_assets/css/styles.css" type="text/css" rel="stylesheet">
+
+    <!-- styling things -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <script src='https://use.fontawesome.com/c2b09e2eb0.js'></script>
+
+    <!-- angular things -->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js'></script>
+    <script src='../_assets/js/app.js'></script>
+    <script src='../_assets/js/angular-fontawesome.js'></script>
+    </head>
+
+    <body ng-app='evac' ng-controller='evacController'>
+
+<nav class='font-nav'>
+    <ul>
+        <!-- logo -->
+        <li id='icon45'style='width:45px; background-image:url("https://evac.gg/raine/images/icon45_evac.png"); background-repeat:no-repeat; background-position:center; background-color: none;'>&nbsp;</li>
+        
+        <!-- general navigation links-->
+        <!-- <li highlight><a ng-click='setContent("evac")'>evac</a></li> -->
+        <li highlight class='twitch'><a ng-click='setContent("twitch")'>stream</a></li>
+        <li highlight class='discord'><a ng-click='setContent("discord")'>discord</a></li>
+        <!--<li highlight class='donate'><a href='https://twitch.streamlabs.com/arcemis' target='new'>spoil me!</a></li> -->
+        <li highlight class='about-us'><a href='https://www.streamership.com/about' target='blank'>about us</a></li>
+        <li highlight class='about-us'><a href='https://www.streamership.com/store' target='new'>store</a></li>
+        <li highlight class='about-us'><a href='https://www.streamership.com/contact' target='blank'>contact</a></li>
+        <!-- <li highlight class='donate'><a ng-click='setContent("donate")'>spoil me!</a></li> -->
+        <li highlight class='subscribe'><a href="https://secure.twitch.tv/products/evac/ticket/new?ref=below_video_subscribe_button" target="new">subscribe</a></li>
+
+        <!-- full screen button-->
+        <li highlight class='right'><a ng-click='toggleFullscreen()'><fa name='television' size=2 ng-style='{ "color" : (isFullscreen) ? "#0194CA" : "#ffffff" }'></fa></a></li>
+
+        <!-- social media links -->
+        <li class='right' style='width: 100px'>&nbsp;</li>
+        <li highlight highlightColor='#4099ff' class='right'><a href='https://twitter.com/streamership' target='new'><fa name='twitter' size=2></fa></a></li>
+        <li highlight highlightColor='#e52d27' class='right'><a href='https://www.youtube.com/channel/UCu_cDt4g_98iADP6bFAPujQ' target='new'><fa name='youtube-play' size=2></fa></a></li>
+        <li highlight highlightColor='#bc2a8d' class='right'><a href="https://www.instagram.com/streamership/" target="new"><fa name='instagram' size=2></fa></a></li>
+        <li highlight highlightColor='#6441a5' class='right'><a href='https://twitch.tv/streamership' target='new'><fa name='twitch' size=2></fa></a></li>                  
+    </ul>
+</nav>
+
+<div id='content'>
+
+    <div id='left'>
+        <!-- twitch video div -->
+        <div style='height: calc(100% - 50px);'>
+            <iframe style='width:100%; height:100%' src='https://twitch.tv/arcemis/embed' allowfullscreen></iframe>
+        </div>
+
+        <!-- twitch stats div -->
+        <div class='font-stats' style='float:right; padding-top:10px'>
+            <fa name='user' ng-style='{ "color" : faUserColor }'></fa> {{info.status}} 
+            <fa name='eye'></fa> {{info.views}}
+            <fa name='heart'></fa> {{info.followers}}
+            <span></span>
+        </div>          
+    </div>
+
+    <!-- right section div -->
+    <div class='right'>
+        
+        <!-- arcemis -->
+        <div class='font-stats' ng-show='rightContent == "arcemis" && !isFullscreen'>
+            
+        </div>
+
+        <!-- stream -->
+        <div ng-show='rightContent == "twitch" && !isFullscreen'>
+            <iframe style='width:100%; height: 100%' src='https://twitch.tv/chat/embed?channel=arcemis&popout_chat=true' allowfullscrene></iframe>
+        </div>
+
+        <!-- discord -->
+        <div ng-show='rightContent == "discord" && !isFullscreen'>
+            <iframe style='width:100%; height:100%' src='https://discordapp.com/widget?id=93284396739604480&theme=dark' allowtransparency='true'></iframe>
+        </div>
+
+        <!-- spoil me! -->
+        <div ng-show='rightContent == "donate" && !isFullscreen'>
+            <iframe style='width:100%; height:100%' src='https://www.twitchalerts.com/donate/arcemis' allowfullscreen></iframe></center>
+        </div>
+
+    </div>
+</div>
+<script src="/OO2-website/_assets/js/background.js"></script>
+</body>
+</html>
