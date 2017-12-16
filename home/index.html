@@ -17,19 +17,61 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="../_assets/css/font-awesome.min.css">
     <link href="../_assets/css/styles.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../_assets/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_assets/css/component.css" />
+
+    <!---JS Scripts-->
+    <script src="../_assets/js/modernizr.custom.js"></script>
+
 </head>
 <body>
-    <div class="nav-content">
-        <ul>
-            <a href="../" class="logomark"></a>
-                <svg xmlns="http://www.w3.org/2000/svg" height="22" width="22"></svg>
-            <li><a href="../home">Home</a></li>
-            <li><a href="../annoucements">Announcements</a></li>
-            <li><a href="../about">About</a></li>
-            <li><a href="../donate">Donate</a></li>
-            <li><a href="../media">Media</a></li>
-            <li><a href="../contact">Contact Us</a></li>=
-        </ul>
-    </div>
+    <div class="container">  
+                <div class="column">
+                    <div id="main-menu" class="main-menuwrapper">
+                        <button class="main-trigger">Open Menu</button>
+                        <ul class="main-menu">
+                            <a href="#">About Us</a>
+                            <ul class="main-submenu">
+                                <li>
+                                    <li><a href="#">Name1</a></li>
+                                    <li><a href="#">Name2</a></li>
+                                    <li><a href="#">Name3</a></li>
+                                    <li><a href="#">Name4</a></li>
+                                </li>
+                            <a href="#">Streamers</a>
+                            <ul class="main-submenu">
+                                <li>
+                                    <li><a href="#">Name1</a></li>
+                                    <li><a href="#">Name2</a></li>
+                                    <li><a href="#">Name3</a></li>
+                                    <li><a href="#">Name4</a></li>
+                                </li>
+                            <a href="#">Store</a>
+                            <ul class="main-submenu">
+                                <li>
+                                    <li><a href="#">Cat1</a></li>
+                                    <li><a href="#">Cat2</a></li>
+                                    <li><a href="#">Cat3</a></li>
+                                    <li></li><a href="#">Cat4</a></li>
+                                </li>
+                            <a href="#">Contact</a>
+                            <ul class="main-submenu">
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>    
+                        </ul>
+                    </div><!-- /main-menuwrapper -->
+                </div>
+            </div>
+        </div><!-- /container -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="../_assets/js/jquery.mainmenu.js"></script>
+        <script>
+            $(function() {
+                $( '#main-menu' ).mainmenu({
+                    animationClasses : { classin : 'main-animate-in-2', classout : 'main-animate-out-2' }
+                });
+            });
+        </script>
 </body>
 </html>
